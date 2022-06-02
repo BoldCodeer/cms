@@ -21,8 +21,9 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-Route::get('groups', Groups::class);
+Route::get('groups', function () {
+    return view('livewire.home');
+});
 
 Route::middleware([
     'auth:sanctum',
