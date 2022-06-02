@@ -17,7 +17,7 @@ class Groups extends Component
      */
     public function render()
     {
-        $this->posts = Group::all();
+        $this->groups = Group::all();
         return view('livewire.groups');
     }
 
@@ -79,7 +79,7 @@ class Groups extends Component
             'course' => 'required',
         ]);
 
-        Post::updateOrCreate(['id' => $this->group_id], [
+        Group::updateOrCreate(['id' => $this->group_id], [
             'name' => $this->name,
             'section' => $this->section,
             'year' => $this->year,

@@ -16,8 +16,8 @@
             </div>
         @endif
         <button wire:click="create()"
-                class="my-4 inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-red-600 text-base font-bold text-white shadow-sm hover:bg-red-700">
-            Create Student
+                class="px-6 py-2 rounded bg-zinc-400 hover:bg-zinc-500 text-zinc-100">
+            Create Group
         </button>
         @if($isOpen)
             @include('livewire.create')
@@ -25,7 +25,6 @@
     <table class="table table-bordered mt-5">
         <thead>
         <tr>
-            <th>No.</th>
             <th>Name</th>
             <th>Section</th>
             <th>Year</th>
